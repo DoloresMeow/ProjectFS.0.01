@@ -36,6 +36,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ChooseMagic",
+                    "type": "Button",
+                    "id": "129ee745-ad40-4dac-97cc-ac39c18b3dab",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -212,6 +220,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6cf473aa-6ee0-40b4-a42f-4da787d166d9",
+                    "path": "<Keyboard>/#(Q)",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "ChooseMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

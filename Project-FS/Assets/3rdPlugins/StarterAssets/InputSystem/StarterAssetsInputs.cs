@@ -10,6 +10,7 @@ namespace StarterAssets
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
+		public bool chooseMagic;
 		public bool jump;
 		public bool sprint;
 
@@ -41,6 +42,11 @@ namespace StarterAssets
 			JumpInput(value.isPressed);
 		}
 
+		public void OnChooseMagic(InputValue value)
+        {
+			ChooseMagicInput(value.isPressed);
+
+		}
 		public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
@@ -60,6 +66,11 @@ namespace StarterAssets
 			look = newLookDirection;
 		}
 
+		public void ChooseMagicInput(bool newchooseMagicState)
+        {
+			chooseMagic = newchooseMagicState;
+
+		}
 		public void JumpInput(bool newJumpState)
 		{
 			jump = newJumpState;

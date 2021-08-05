@@ -125,6 +125,7 @@ namespace StarterAssets
 		private void LateUpdate()
 		{
 			CameraRotation();
+			ChooseMagic();
 		}
 
 		private void AssignAnimationIDs()
@@ -226,7 +227,14 @@ namespace StarterAssets
 				_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
 			}
 		}
-
+		private void ChooseMagic()
+        {
+			if(_input.chooseMagic)
+            {
+				//Press and Release is holdon
+				Debug.Log("Choose Magic Press");
+            }
+        }
 		private void JumpAndGravity()
 		{
 			if (Grounded)
