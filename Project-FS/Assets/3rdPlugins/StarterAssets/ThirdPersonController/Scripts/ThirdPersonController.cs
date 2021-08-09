@@ -12,7 +12,7 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 	[RequireComponent(typeof(PlayerInput))]
 #endif
-	public class ThirdPersonController : MonoBehaviour
+	public class ThirdPersonController : Singleton<ThirdPersonController>
 	{
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
@@ -59,6 +59,7 @@ namespace StarterAssets
 		[Tooltip("For locking the camera position on all axis")]
 		public bool LockCameraPosition = false;
 
+		public bool _isChooseMagic;
 		// cinemachine
 		private float _cinemachineTargetYaw;
 		private float _cinemachineTargetPitch;

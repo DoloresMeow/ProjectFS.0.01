@@ -11,6 +11,7 @@ namespace StarterAssets
 		public Vector2 move;
 		public Vector2 look;
 		public bool chooseMagic;
+		public bool useMagic;
 		public bool jump;
 		public bool sprint;
 
@@ -47,6 +48,12 @@ namespace StarterAssets
 			ChooseMagicInput(value.isPressed);
 
 		}
+
+		public void OnUseMagic(InputValue value)
+        {
+			UseMagicInput(value.isPressed);
+
+		}
 		public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
@@ -71,6 +78,11 @@ namespace StarterAssets
 			chooseMagic = newchooseMagicState;
 
 		}
+
+		public void UseMagicInput(bool newUseMagicState)
+        {
+			useMagic = newUseMagicState;
+        }
 		public void JumpInput(bool newJumpState)
 		{
 			jump = newJumpState;

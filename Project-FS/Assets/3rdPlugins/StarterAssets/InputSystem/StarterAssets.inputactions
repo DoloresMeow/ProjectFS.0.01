@@ -44,6 +44,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "UseMagic",
+                    "type": "Button",
+                    "id": "aeb3f11a-22a6-48c3-ba81-fb8c6a02a300",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -231,6 +239,17 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "ChooseMagic",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d41e8034-ee21-4380-851c-4998dd6e4fd8",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "UseMagic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
