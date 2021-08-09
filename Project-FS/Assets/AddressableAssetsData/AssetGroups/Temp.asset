@@ -21,17 +21,21 @@ MonoBehaviour:
     m_Address: CloudsTemp
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 2087363518516983452, guid: cf893de94e451d44e95cb89e4d45c5a7,
-      type: 3}
-    m_TargetAsset: {fileID: 2087363518516983452, guid: cf893de94e451d44e95cb89e4d45c5a7,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 9b35cfcca7b3bc843b87e0a5d8273677
     m_Address: ChooseMagicLayout
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 8655653306418989082, guid: 9b35cfcca7b3bc843b87e0a5d8273677,
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c31d1575fc9adb54fa42ee5f3a232a16
+    m_Address: StatePanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 3554912309250521889, guid: c31d1575fc9adb54fa42ee5f3a232a16,
       type: 3}
-    m_TargetAsset: {fileID: 8655653306418989082, guid: 9b35cfcca7b3bc843b87e0a5d8273677,
+    m_TargetAsset: {fileID: 3554912309250521889, guid: c31d1575fc9adb54fa42ee5f3a232a16,
       type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 679f8702c56507d4fa718704dda2188f, type: 2}
