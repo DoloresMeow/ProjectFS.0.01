@@ -1468,10 +1468,10 @@ CharacterController:
   m_Height: 0.95
   m_Radius: 0.25
   m_SlopeLimit: 45
-  m_StepOffset: 0.15
+  m_StepOffset: 0.45
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.49, z: 0}
 --- !u!114 &1036163664746092743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1515,10 +1515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 1.5
+  MoveSpeed: 1
   SprintSpeed: 4
   RotationSmoothTime: 0.12
-  SpeedChangeRate: 10
+  SpeedChangeRate: 8
   JumpHeight: 1
   Gravity: -10
   JumpTimeout: 0.3
