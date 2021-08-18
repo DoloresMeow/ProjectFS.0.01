@@ -99,6 +99,21 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 5473913720523881556}
+    - target: {fileID: 5091447414028751019, guid: 880eea08d4ab9c64da28a2f0357584f1,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091447414028751019, guid: 880eea08d4ab9c64da28a2f0357584f1,
+        type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091447414028751019, guid: 880eea08d4ab9c64da28a2f0357584f1,
+        type: 3}
+      propertyPath: m_Lens.NearClipPlane
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5091447414028751189, guid: 880eea08d4ab9c64da28a2f0357584f1,
         type: 3}
       propertyPath: m_Name
