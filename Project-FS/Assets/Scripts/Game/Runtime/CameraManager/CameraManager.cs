@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine;
-
+using Cinemachine;
 public class CameraManager : Singleton<CameraManager>
 {
     private string cameraRootPath = "CameraRoot";
@@ -15,7 +15,6 @@ public class CameraManager : Singleton<CameraManager>
 
     private Camera uiCameraComponent;
     private Camera mainCameraComponent;
-    private ThirdPersonCamera mainCameraController;
     public GameObject MainCamera
     {
         get 
@@ -35,14 +34,6 @@ public class CameraManager : Singleton<CameraManager>
         }
     }
 
-    public ThirdPersonCamera MainCameraController
-    {
-        get
-        {
-            return mainCameraController;
-        }
-    }
-
     private void StartAsync()
     {
         Addressables.LoadAssetAsync<GameObject>(cameraRootPath).Completed += onCameraLoadDone;
@@ -51,9 +42,10 @@ public class CameraManager : Singleton<CameraManager>
     private void onCameraLoadDone(AsyncOperationHandle<GameObject> obj)
     {
         cameraRootPrefab = obj.Result;
-        cameraRoot = Instantiate(cameraRootPrefab);
+        cameraRoot = Instantiate(cameraRootPrefab,transform);
         LoadCamera();
-
+        PlayerManager.GetInstance();
+        UIManager.GetInstance();
     }
     public override void Init()
     {
@@ -91,11 +83,8 @@ public class CameraManager : Singleton<CameraManager>
     protected virtual void InitMainCamera()
     {
         mainCameraComponent = mainCamera.GetComponent<Camera>();
-        if(!mainCamera.TryGetComponent(out mainCameraController))
-        {
-            mainCameraController = mainCamera.AddComponent<ThirdPersonCamera>();
-        }
         //mainCamera.transform.localPosition = new Vector3(0, 2, -20);
         //mainCamera.transform.localRotation = Quaternion.Euler(10, 0, 0);
     }
+
 }

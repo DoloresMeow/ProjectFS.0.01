@@ -10,24 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default
+  m_Name: Scene
   m_EditorClassIdentifier: 
-  m_GroupName: Default
+  m_GroupName: Scene
   m_Data:
     m_SerializedData: []
-  m_GUID: db890a71a8d2c5b48a0025e03b093abc
+  m_GUID: 002ed9116ebb3884aa2702e6cb4d699e
   m_SerializeEntries:
-  - m_GUID: 6330fb1fd0b86f64badc226091554f70
-    m_Address: CameraRoot
+  - m_GUID: e7520f3d4f89d6547a9455081b1cb312
+    m_Address: DemoScene
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 5856602640030378304, guid: 6330fb1fd0b86f64badc226091554f70,
-      type: 3}
-    m_TargetAsset: {fileID: 5856602640030378304, guid: 6330fb1fd0b86f64badc226091554f70,
-      type: 3}
+    m_MainAsset: {fileID: 102900000, guid: e7520f3d4f89d6547a9455081b1cb312, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: e7520f3d4f89d6547a9455081b1cb312, type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 679f8702c56507d4fa718704dda2188f, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 8cabbd6e6943c00448e62f3dd0864c4a, type: 2}
-    - {fileID: 11400000, guid: ab5e979070916134aa34e4557bb9c0db, type: 2}
+    - {fileID: 11400000, guid: 717c26dd5b7086f42ab9647ced2abc8e, type: 2}
+    - {fileID: 11400000, guid: fd27f1bf4caa3ef45960c3d81e0b908e, type: 2}

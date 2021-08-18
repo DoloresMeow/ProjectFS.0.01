@@ -11,11 +11,9 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        //JustTest.GetInstance().DebugTest();
-        TimeManager.GetInstance();
-        UIManager.GetInstance();
+        //UIManager.GetInstance();
         CameraManager.GetInstance();
-        //ThirdPersonInputManager.GetInstance();
+        //PlayerManager.GetInstance();
     }
     // Start is called before the first frame update
 

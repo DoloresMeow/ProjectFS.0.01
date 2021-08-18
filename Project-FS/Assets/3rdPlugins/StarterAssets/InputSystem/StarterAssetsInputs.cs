@@ -2,9 +2,7 @@ using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
-
-namespace StarterAssets
-{
+using StarterAssets;
 	public class StarterAssetsInputs : MonoBehaviour
 	{
 		[Header("Character Input Values")]
@@ -108,5 +106,3 @@ namespace StarterAssets
 #endif
 
 	}
-	
-}

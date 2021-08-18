@@ -13,30 +13,51 @@ public class UIManager : Singleton<UIManager>
     private GameObject uiRoot;
     private GameObject uiRootPrefab;
     private Canvas uiCanvas;
+
+    private string chooseMagicLayoutPath = "ChooseMagicLayout";
+    private GameObject chooseMagicLayout;
+    private GameObject chooseMagicLayoutPrefab;
+    public GameObject ChooseMagicLayout
+    {
+        get
+        {
+            return chooseMagicLayout;
+        }
+    }
     private void StartAsync()
     {
-        //uiRootPrefab = await Addressables.LoadAssetAsync<GameObject>(uiRootPath).Task;
         Addressables.LoadAssetAsync<GameObject>(uiRootPath).Completed += OnLoadDone;
-        //uiRoot = Instantiate(uiRootPrefab);
-        
+
     }
 
     private void OnLoadDone(AsyncOperationHandle<GameObject> obj)
     {
         uiRootPrefab = obj.Result;
-        uiRoot = Instantiate(uiRootPrefab);
-        UICanvasInit();
-        DontDestroyOnLoad(uiRoot);
+        uiRoot = Instantiate(uiRootPrefab,this.transform);
+        uiCanvas = uiRoot.GetComponentInChildren<Canvas>();
+        UICanvasInit(uiCanvas);
+        Debug.Log("Create UI Root");
+        //DontDestroyOnLoad(uiRootPrefab);
+
+        //Addressables.LoadAssetAsync<GameObject>(chooseMagicLayoutPath).Completed += onChooseMagicLayoutLoadDone;
     }
+
+    private void onChooseMagicLayoutLoadDone(AsyncOperationHandle<GameObject> obj)
+    {
+        chooseMagicLayoutPrefab = obj.Result;
+        chooseMagicLayout = Instantiate(chooseMagicLayoutPrefab,uiRoot.transform);
+        chooseMagicLayout.SetActive(false);
+    }
+
     public override void Init()
     {
         StartAsync();
     }
 
-    private void UICanvasInit()
+    private void UICanvasInit(Canvas canvas)
     {
-        uiCanvas = uiRoot.GetComponentInChildren<Canvas>();
-        uiCanvas.renderMode = RenderMode.ScreenSpaceCamera;
-        uiCanvas.worldCamera = CameraManager.GetInstance().UICamera.GetComponent<Camera>();
+        //canvas = uiRoot.GetComponentInChildren<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        canvas.worldCamera = CameraManager.GetInstance().UICamera.GetComponent<Camera>();
     }
 }
