@@ -56,7 +56,7 @@ using StarterAssets;
 		[Tooltip("For locking the camera position on all axis")]
 		public bool LockCameraPosition = false;
 
-		public bool _isChooseMagic;
+		//public bool _isChooseMagic;
 		// cinemachine
 		private float _cinemachineTargetYaw;
 		private float _cinemachineTargetPitch;
@@ -226,13 +226,12 @@ using StarterAssets;
 			}
 		}
 		private void ChooseMagic()
-        {
+		{
 			if(_input.chooseMagic)
-            {
-				//Press and Release is holdon
-				Debug.Log("Choose Magic Press");
-            }
-        }
+			{
+
+			}
+		}
 		private void JumpAndGravity()
 		{
 			if (Grounded)

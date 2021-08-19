@@ -36,10 +36,10 @@ public class UIManager : Singleton<UIManager>
         uiRoot = Instantiate(uiRootPrefab,this.transform);
         uiCanvas = uiRoot.GetComponentInChildren<Canvas>();
         UICanvasInit(uiCanvas);
-        Debug.Log("Create UI Root");
+        //Debug.Log("Create UI Root");
         //DontDestroyOnLoad(uiRootPrefab);
 
-        //Addressables.LoadAssetAsync<GameObject>(chooseMagicLayoutPath).Completed += onChooseMagicLayoutLoadDone;
+        Addressables.LoadAssetAsync<GameObject>(chooseMagicLayoutPath).Completed += onChooseMagicLayoutLoadDone;
     }
 
     private void onChooseMagicLayoutLoadDone(AsyncOperationHandle<GameObject> obj)

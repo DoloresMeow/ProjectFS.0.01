@@ -13,6 +13,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public Transform PlayerCameraRoot;
     public override void Init()
     {
+        PlayerState.GetInstance();
         StartAsync();
     }
 
@@ -26,8 +27,6 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         playerPrefab = obj.Result;
         player = Instantiate(playerPrefab,transform);
-        //DontDestroyOnLoad(playerPrefab);
-        //playerPrefab.SetActive(false);
         player.SetActive(true);
     }
 }
