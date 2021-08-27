@@ -8,11 +8,10 @@ public enum PlayerActionState
     ChooseMagic,
     UseMagic
 }
+
 public class PlayerState :Singleton<PlayerState>
 {
     private readonly int InitialEnergyValue = 20;
-
-
 
     private PlayerActionState playerActionStates; // is choose Magic state,is preuse magic state
 
@@ -20,6 +19,15 @@ public class PlayerState :Singleton<PlayerState>
     private int currentEnergyValue;
     private int maxEnergyValue;    //energy value max limit
     private int recoveryEnergySpeed;    // x value per minute
+
+    //a simple struct. magicName /val = is understand?
+    private Dictionary<string,bool> magicList = new Dictionary<string, bool>();
+
+    public Dictionary<string, bool> MagicList
+    {
+        get { return magicList; }
+    }
+
     private PlayerActionState PlayerActionStates
     {
         get { return playerActionStates; }
@@ -49,6 +57,38 @@ public class PlayerState :Singleton<PlayerState>
         maxEnergyValue = InitialEnergyValue;
         currentEnergyValue = maxEnergyValue;
         recoveryEnergySpeed = 1;
+        InitPlayerMagicList();
     }
 
+    private void InitPlayerMagicList()
+    {
+        magicList.Add("CloudMagic",true);
+    }
+
+    public bool GetMagicUnderstandState(string magicName)
+    {
+        bool state;
+        if(magicList.TryGetValue(magicName, out state))
+        {
+            return state;
+        }
+        else
+        {
+            Debug.Log("Have not this magicName,please check out");
+            return false;
+        }
+
+    }
+
+    public void SetMagicUnderstandState(string magicName,bool value)
+    {
+        if(!magicList.ContainsKey(magicName))
+        {
+            Debug.Log("Have not this magicName,please check out");
+            return;
+        }
+        magicList.Remove(magicName);
+        magicList.Add(magicName, value);
+        
+    }
 }

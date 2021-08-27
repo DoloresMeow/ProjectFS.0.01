@@ -14,6 +14,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public override void Init()
     {
         PlayerState.GetInstance();
+        ChooseMagicManager.GetInstance();
         StartAsync();
     }
 
